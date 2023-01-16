@@ -1,0 +1,114 @@
+elcome to Termux!
+
+Docs:       https://termux.dev/docs
+Donate:     https://termux.dev/donate
+Community:  https://termux.dev/community
+
+Working with packages:
+
+ - Search:  pkg search <query>
+ - Install: pkg install <package>
+ - Upgrade: pkg upgrade
+
+Subscribing to additional repositories:
+
+ - Root:    pkg install root-repo
+ - X11:     pkg install x11-repo
+
+For fixing any repository issues,
+try 'termux-change-repo' command.
+
+Report issues at https://termux.dev/issues
+~ $ apt update
+Get:1 https://packages.termux.dev/apt/termux-main stable InRelease [14.0 kB]
+Get:2 https://packages.termux.dev/apt/termux-main stable/main arm Packages [480 kB]
+Fetched 494 kB in 7s (72.2 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+~ $ apt upgrade
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+~ $ apt install termux-api
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  termux-api
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 21.4 kB of archives.
+After this operation, 291 kB of additional disk space will be used.
+Get:1 https://packages.termux.dev/apt/termux-main stable/main arm termux-api arm 0.57 [21.4 kB]
+Fetched 21.4 kB in 2s (11.4 kB/s)
+Selecting previously unselected package termux-api.
+(Reading database ... 5537 files and directories currently installed.)
+Preparing to unpack .../termux-api_0.57_arm.deb ...
+Unpacking termux-api (0.57) ...
+Setting up termux-api (0.57) ...
+~ $ termux-wifi-enable
+Usage: termux-wifi-enable [true | false]
+Toggle Wi-Fi On/Off
+~ $ termux-wifi-enable true
+
+~ $ termus-wifi-enable false
+No command termus-wifi-enable found, did you mean:
+ Command termux-wifi-enable in package termux-api
+~ $ termux-wifi-scaninfo
+{
+  "error": "Please grant the following permission to use this command: android.permission.ACCESS_FINE_LOCATION"
+}
+~ $ termux-wifi-scaninfo
+[
+  {
+    "bssid": "3c:b6:b7:3c:95:91",
+    "frequency_mhz": 2437,
+    "rssi": -42,
+    "ssid": "vivo 1610",
+    "timestamp": 63976098514,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "84:07:fa:25:05:20",
+    "frequency_mhz": 2437,
+    "rssi": -74,
+    "ssid": "PT. RAN",
+    "timestamp": 63976098553,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "ec:e7:a2:2e:08:b8",
+    "frequency_mhz": 2462,
+    "rssi": -80,
+    "ssid": "RESTU IBU",
+    "timestamp": 63976098538,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "b4:6e:08:88:50:68",
+    "frequency_mhz": 2452,
+    "rssi": -84,
+    "ssid": "RPHHMT",
+    "timestamp": 63976098568,
+    "channel_bandwidth_mhz": "20"
+  },
+  {
+    "bssid": "68:ff:7b:7d:4e:b0",
+    "frequency_mhz": 2412,
+    "rssi": -88,
+    "ssid": "Kandang: HMT:",
+    "timestamp": 63976098582,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 2422
+  },
+  {
+    "bssid": "40:3f:8c:ce:0c:e4",
+    "frequency_mhz": 2427,
+    "rssi": -91,
+    "ssid": "SMART",
+    "timestamp": 63976098596,
+    "channel_bandwidth_mhz": "40",
+    "center_frequency_mhz": 2437
